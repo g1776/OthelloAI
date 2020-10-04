@@ -1,0 +1,55 @@
+0   1   2   3    4    5    6    7
+8   9   10  11   12   13   14   15
+16  17  18  19   20   21   22   23
+24  25  26  27   28   29   30   31
+32  33  34  35   36   37   38   39
+40  41
+48
+56
+
+0 -- 7
+1 -- 6
+2 -- 5
+3 -- 4
+4 -- 3
+5 -- 2
+6 -- 1
+7 -- 0
+
+len(d) = 9
+len(h) = 1
+len(v) = 8
+
+num_left = id % 8
+num_right = 7 - (id % 8)
+num_up = (id // 8)
+num_down = 7 - (id // 8)
+
+nw = id - (9 * min(num_left, num_up))
+
+ne = id - (7 * min(num_right, num_up))
+
+sw = id + (7 * min(num_left, num_down))
+
+se = id + (9 * min(num_right, num_down))
+
+
+######## validating ##########
+
+with b:
+
+INVALID:  b w w b w
+VALID  :  w w w w b w w
+
+
+
+########### Series of events in a turn #########
+
+Player X chooses square -->
+Player X clicks on square -->
+
+Square changes color --> 
+corresponding squares flip --> 
+change current_player to other color --> 
+update_board() --> 
+ensure there are available moves  ----------^
