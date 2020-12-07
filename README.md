@@ -6,7 +6,7 @@
 python game.py
 ```
 
-This launches the game with 1 player and 1 AI. In order to paly with 2 players, change the last line in game.py from play(1) to play(0)
+This launches the game with 1 player and 1 AI. In order to paly with 2 players, change the last line in game.py from play(1) to play(2).
 
 ### To Analysis AI Performance
 
